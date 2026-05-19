@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Story | AURELIA</title>
+    <meta name="description" content="Read the story behind AURELIA's uncompromising dedication to luxury and craftsmanship.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">AURELIA</a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Shop</a></li>
+                <li><a href="about.html">Brand Story</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button id="cart-btn">Cart <span id="cart-count">0</span></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container fade-in">
+            <div class="page-header">
+                <h1>The AURELIA Legacy</h1>
+                <p>A commitment to uncompromising luxury and timeless elegance.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 2rem;">
+                <div>
+                    <h2 style="margin-bottom: 1.5rem; font-size: 2rem;">Craftsmanship at our Core</h2>
+                    <p style="margin-bottom: 1rem; color: var(--color-gray);">Every AURELIA piece is a testament to the artisan's touch. We source only the most extraordinary materials: from the high altitudes of Mongolia for our cashmere to the historic tanneries of Italy for our calfskin leather.</p>
+                    <p style="color: var(--color-gray);">Our design philosophy marries minimalist silhouettes with opulent textures, ensuring that every garment and accessory transcends fleeting trends to become a lifelong companion.</p>
+                </div>
+                <div style="background: var(--color-light-gray); height: 500px; display: flex; justify-content: center; align-items: center;">
+                    <span style="font-family: var(--font-heading); font-size: 4rem; color: var(--color-gold); opacity: 0.5;">A</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Selection</h2>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <!-- Cart items injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-amount">$0.00</span>
+            </div>
+            <a href="checkout.html">
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- AI Concierge Chat -->
+    <button class="chat-fab" id="chat-fab">A</button>
+    <div class="chat-window" id="chat-window">
+        <div class="chat-header">
+            <h3>AURELIA Concierge</h3>
+            <button class="close-chat" id="close-chat">&times;</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot">Welcome to AURELIA. How may I assist you with your styling needs today?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input-field" placeholder="Ask about materials, shipping...">
+            <button id="chat-send">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

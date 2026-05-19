@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURELIA | Luxury Fashion</title>
+    <meta name="description" content="Discover AURELIA, the pinnacle of luxury fashion, featuring handcrafted Italian leather and Mongolian cashmere.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">AURELIA</a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Shop</a></li>
+                <li><a href="about.html">Brand Story</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button id="cart-btn">Cart <span id="cart-count">0</span></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero fade-in">
+            <h1>AURELIA</h1>
+            <p>Elegance Redefined. Discover our exclusive collection of meticulously crafted luxury pieces.</p>
+        </section>
+
+        <section class="container">
+            <div id="products-container" class="products-grid">
+                <!-- Products will be injected here by script.js -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Selection</h2>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <!-- Cart items injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-amount">$0.00</span>
+            </div>
+            <a href="checkout.html">
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- AI Concierge Chat -->
+    <button class="chat-fab" id="chat-fab">A</button>
+    <div class="chat-window" id="chat-window">
+        <div class="chat-header">
+            <h3>AURELIA Concierge</h3>
+            <button class="close-chat" id="close-chat">&times;</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot">Welcome to AURELIA. How may I assist you with your styling needs today?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input-field" placeholder="Ask about materials, shipping...">
+            <button id="chat-send">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

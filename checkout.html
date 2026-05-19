@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | AURELIA</title>
+    <meta name="description" content="Secure checkout for your AURELIA selections.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html">AURELIA</a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Shop</a></li>
+                <li><a href="about.html">Brand Story</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button id="cart-btn" style="visibility: hidden;">Cart <span id="cart-count">0</span></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container fade-in">
+            <div class="page-header" style="padding: 2rem 0;">
+                <h1>Checkout</h1>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <!-- Order Summary -->
+                <div style="background: var(--color-light-gray); padding: 2rem;">
+                    <h2 style="margin-bottom: 2rem; border-bottom: 1px solid #ccc; padding-bottom: 1rem;">Order Summary</h2>
+                    <div id="checkout-items">
+                        <!-- Items injected by JS -->
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-top: 2rem; font-family: var(--font-heading); font-size: 1.5rem; border-top: 1px solid #ccc; padding-top: 1rem;">
+                        <span>Total</span>
+                        <span id="checkout-total">$0.00</span>
+                    </div>
+                </div>
+
+                <!-- Payment Details -->
+                <div>
+                    <h2 style="margin-bottom: 2rem;">Payment Details</h2>
+                    <form id="checkout-form">
+                        <div class="form-group">
+                            <label for="checkout-name">Cardholder Name</label>
+                            <input type="text" id="checkout-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout-email">Email Address for Receipt</label>
+                            <input type="email" id="checkout-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Card Number</label>
+                            <input type="text" placeholder="XXXX XXXX XXXX XXXX" required>
+                        </div>
+                        <div style="display: flex; gap: 1rem;">
+                            <div class="form-group" style="flex: 1;">
+                                <label>Expiry Date</label>
+                                <input type="text" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group" style="flex: 1;">
+                                <label>CVC</label>
+                                <input type="text" placeholder="123" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary" id="place-order-btn" style="width: 100%; margin-top: 1rem;">Place Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Slide out cart is not needed here, but kept for JS compatibility if required, though we hid the button -->
+
+    <!-- AI Concierge Chat -->
+    <button class="chat-fab" id="chat-fab">A</button>
+    <div class="chat-window" id="chat-window">
+        <div class="chat-header">
+            <h3>AURELIA Concierge</h3>
+            <button class="close-chat" id="close-chat">&times;</button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot">Welcome to AURELIA. How may I assist you with your styling needs today?</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input-field" placeholder="Ask about materials, shipping...">
+            <button id="chat-send">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
